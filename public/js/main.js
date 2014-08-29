@@ -5,10 +5,12 @@ var templates = require('./api/templates'),
 
 var bind = function() {
   $('.folder').bind('click', function() {
+    var newPath = '?dir=' + util.getParameterByName('dir') + '/' + this.innerHTML;
     window.history.pushState({}, '', '?dir=' + util.getParameterByName('dir') + '/' + this.innerHTML);
     templates.getFileBroswer(util.getParameterByName('dir'),
       function(html) {
         $('#fileBroswer').html(html);
+        window.history.pushState({}, '', newPath);
         bind();
       }
     );
