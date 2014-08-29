@@ -3,7 +3,7 @@ var fs = require('fs');
 var show = function(request, response) {
 
   var dir = App.basePath;
-
+  console.log(dir);
   fs.readdir(dir, function(error, files) {
 
     var finalFiles = [];

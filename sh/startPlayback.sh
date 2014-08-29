@@ -4,4 +4,4 @@ export VDPAU_DRIVER=sunxi
 killall mplayer
 pulseaudio -k
 pulseaudio --start
-mplayer "$1"
+mplayer -slave -quiet "$1"
