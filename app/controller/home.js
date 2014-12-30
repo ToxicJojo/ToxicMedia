@@ -2,7 +2,7 @@ var fs = require('fs');
 
 var show = function(request, response) {
 
-  var dir = '/home/jojo/Documents';
+  var dir = App.basePath;
 
   fs.readdir(dir, function(error, files) {
 

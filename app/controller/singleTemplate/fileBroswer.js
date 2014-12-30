@@ -1,7 +1,7 @@
 var fs = require('fs');
 
 var show = function(request, response) {
-  var dir = '/home/jojo/Documents' + request.query.dir;
+  var dir = App.basePath + request.query.dir;
   console.log(dir);
 
   fs.readdir(dir, function(error, files) {

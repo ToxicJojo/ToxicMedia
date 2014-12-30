@@ -24,6 +24,12 @@ global.App = {
   }
 };
 
+if (env === 'development') {
+  App.basePath = '/home/jojo/Documents';
+} else {
+  App.basePath = '/srv/HDD/DLNA';
+}
+
 //Jade setup
 App.app.set('views', App.appPath("templates"));
 App.app.set('view engine', 'jade');
