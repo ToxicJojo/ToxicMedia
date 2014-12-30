@@ -1,0 +1,15 @@
+ol.breadcrumb
+  - var path = ''
+  - var i = 0;
+  each folder in folder_structure
+    - i++
+    if i > 3
+      if i == 4
+        li
+          a.folderPath( data-value='' data-type='dir') #{folder}
+      else        
+        - path += '/' + folder
+        li
+          a.folderPath( data-value='#{path}' data-type='dir') #{folder}
+    else
+      li #{folder}
