@@ -25,8 +25,12 @@ var bind = function() {
   });
 
   $('.playButton').bind('click', function() {
-    alert();
+    alert(this.dataset.value + ' wird nun abgespielt.');
     video.startPlayback(util.getParameterByName('dir') + '/' + this.dataset.value);
+  });
+
+  $('.pauseButton').bind('click', function() {
+    video.togglePause();
   });
 
 };

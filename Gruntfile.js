@@ -10,6 +10,7 @@ module.exports = function(grunt) {
       'public/build/js/api/templates/getFileBroswer.js': ['public/js/api/templates/getFileBroswer.js'],
       'public/build/js/api/video.js': ['public/js/api/video.js'],
       'public/build/js/api/video/startPlayback.js': ['public/js/api/video/startPlayback.js'],
+      'public/build/js/api/video/togglePause.js': ['public/js/api/video/togglePause.js'],
     },
     uglify: {},
     cssmin: {
