@@ -35,6 +35,10 @@ var bind = function() {
     video.togglePause();
   });
 
+  $('.stopButton').bind('click', function() {
+    video.stopPlayback();
+  });
+
 };
 
 $(document).ready(function() {
